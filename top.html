@@ -1,0 +1,24 @@
+<?php
+// DB接続
+$con = mysqli_connect('localhost', 'root', '');
+// 使用するDB名の指定
+mysqli_select_db($con,'havefunlunch_system');
+//TODO User情報取得
+$sql = "SELECT id,first_name,last_name from m_user where id ='".$_POST["id"]."' and password = '".$_POST["pass"]."'";
+$responce = mysqli_query($con,$sql);
+var_dump($responce);
+//TODO ログイン判定
+//TODO 失敗だった場合
+//TODO 成功だった場合
+ ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>top-page-havefunlunch</title>
+  </head>
+  <body>
+    toppage
+
+  </body>
+</html>
