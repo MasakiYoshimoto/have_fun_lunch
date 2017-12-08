@@ -3,8 +3,9 @@
 $con = mysqli_connect('localhost', 'root', '');
 // 使用するDB名の指定
 mysqli_select_db($con,'havefunlunch_system');
-//TODO User情報取得
+// User情報取得
 $sql = "SELECT id,first_name,last_name from m_user where id ='".$_POST["id"]."' and password = '".$_POST["pass"]."'";
+// クエリ実行・結果を代入
 $responce = mysqli_query($con,$sql);
 var_dump($responce);
 //TODO ログイン判定
