@@ -7,10 +7,25 @@ mysqli_select_db($con,'havefunlunch_system');
 $sql = "SELECT id,first_name,last_name from m_user where id ='".$_POST["id"]."' and password = '".$_POST["pass"]."'";
 // クエリ実行・結果を代入
 $responce = mysqli_query($con,$sql);
-var_dump($responce);
+
+//空の配列を作成
+$user_info = array();
+
+//responceの内容を1行づつ変換して、変数に代入（responceの内容分ループ）
+while($row = mysqli_fetch_assoc($responce)){
+  //1行になった内容を配列に代入
+  $user_info[] = $row;
+}
+
 //TODO ログイン判定
-//TODO 失敗だった場合
-//TODO 成功だった場合
+if(empty($user_info)){ //TODO 失敗だった場合
+ //TODO エラーメッセージを作成
+
+ //TODO 前の画面に遷移
+
+}
+
+
  ?>
 <!DOCTYPE html>
 <html>
