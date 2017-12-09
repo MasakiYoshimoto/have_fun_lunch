@@ -1,8 +1,12 @@
 <?php
+//PHP始まるよ↑セッション使うよ↓
+session_start();
 // DB接続
 $con = mysqli_connect('localhost', 'root', '');
 // 使用するDB名の指定
 mysqli_select_db($con,'havefunlunch_system');
+//文字コードを指定
+mysqli_set_charset($con,'utf8');
 // User情報取得
 $sql = "SELECT id,first_name,last_name from m_user where id ='".$_POST["id"]."' and password = '".$_POST["pass"]."'";
 // クエリ実行・結果を代入
@@ -17,16 +21,22 @@ while($row = mysqli_fetch_assoc($responce)){
   $user_info[] = $row;
 }
 
-//TODO ログイン判定
-if(empty($user_info)){ //TODO 失敗だった場合
- //TODO エラーメッセージを作成
+// ログイン判定
+if(empty($user_info)){
+  //失敗だった場合
+  //エラーメッセージを作成
+  $_SESSION["error"]["msg"]="ログイン失敗しました。";
+  //前の画面に遷移
+  header("location:index.html");
 
- //TODO 前の画面に遷移
-
+  exit();
+}
+//成功だった場合
+if(!empty($_SESSION["error"]["msg"])){
+  unset($_SESSION["error"]["msg"]);
 }
 
-
- ?>
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -35,6 +45,11 @@ if(empty($user_info)){ //TODO 失敗だった場合
   </head>
   <body>
     toppage
+    <div>
+<?php
+echo $user_info['0']['last_name'];
 
+?>
+    </div>
   </body>
 </html>

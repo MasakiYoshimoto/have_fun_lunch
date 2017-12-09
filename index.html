@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 
@@ -17,6 +18,10 @@
         <input type="submit" name="" value="ログイン">
       </p>
     </form>
+      <?php
+      if(!empty($_SESSION["error"]["msg"])){
+      echo $_SESSION["error"]["msg"];
+    }?>
   </div>
 </body>
 
