@@ -1,0 +1,33 @@
+.contents{
+  margin-left: 100px;
+}
+.contents input[type="text"]{
+  margin-top: 40px;
+  border: 2px solid #906820;
+  border-radius: 9px;
+  padding: 8px 5px;
+  width: 200px;
+  margin-bottom: 30px;
+}
+.contents input[type="password"]{
+  border: 2px solid #906820;
+  border-radius: 9px;
+  padding: 8px 5px;
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.contents table tr td.title{
+  width: 75px;
+  color: #666666;
+  font-size: 22px;
+  font-weight: bold;
+}
+.contents input[type="submit"]{
+  border: 2px solid #906820;
+  border-radius: 9px;
+  background-color: #f2f1c985;
+  padding: 6px 5px;
+  width: 214px;
+  margin-bottom: 30px;
+}

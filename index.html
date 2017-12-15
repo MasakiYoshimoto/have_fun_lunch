@@ -1,21 +1,36 @@
 <?php session_start();?>
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="body.css">
+  <link rel="stylesheet" href="index.css">
   <title>Have Fun Lunch</title>
 </head>
 
 <body>
+  <header>
+    <h1>Have fun Lunch System</h1>
+  </header>
   <div class="contents">
     <form class="" action="top.html" method="post">
+      <table>
+        <tr>
+          <td class="title">ID</td>
+          <td><input type="text" class="id" name="id" value="" size="30" placeholder="従業員番号"></td>
+        </tr>
+        <tr>
+          <td class="title">PASS</td>
+          <td><input type="password" class="id" name="pass" value="" size="30" placeholder="パスワード"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" name="" value="ログイン"></td>
+      </table>
       <p>
-        <input type="text" class="id" name="id" value="" size="30" placeholder="あいでぃー">
-      </p>
-      <input type="text" class="id" name="pass" value="" size="30" placeholder="ぱすわーど">
-      <p>
-        <input type="submit" name="" value="ログイン">
+
+
       </p>
     </form>
       <?php
@@ -23,6 +38,8 @@
       echo $_SESSION["error"]["msg"];
     }?>
   </div>
+  <footer>
+  </footer>
 </body>
 
 </html>
