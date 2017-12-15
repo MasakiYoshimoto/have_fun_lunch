@@ -2,7 +2,7 @@
   require_once("Lib/require.php");
   session_start();
   $con = connect();
-  $user_info = getLoginUser($con,$_POST["id"],$_POST["pass"]);
+  $user_info = getLoginUser($con,$_POST["id_user"],$_POST["pass"]);
 // ログイン判定
 if(empty($user_info)){
   //失敗だった場合
