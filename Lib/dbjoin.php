@@ -6,9 +6,10 @@ function connect (){
   return $con;
 }
 function get_join_list($con){
-  $sql = "SELECT id,first_name,last_name from t_join"
-  ." join m_user on t_join.ID_user=m_user id";
-  $responce = mysqli_query($con,$sql
+  $sql = "SELECT id,first_name,last_name
+          FROM t_join
+          JOIN m_user ON t_join.ID_user=m_user id";
+  $responce = mysqli_query($con,$sql);
   $list = array();
   while($row = mysqli_fetch_assoc($responce)){
     $list[] = $row;

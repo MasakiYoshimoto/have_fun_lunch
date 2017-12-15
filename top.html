@@ -1,4 +1,4 @@
-<php
+<?php
   require_once("Lib/require.php");
   session_start();
   $con = connect();
@@ -26,11 +26,7 @@ if(!empty($_SESSION["error"]["msg"])){
     <title>top-page-havefunlunch</title>
   </head>
   <header>
-    <?php
-    foreach($user_info as $key => $value){
-     echo "こんにちは ".$value["last_name"].$value["first_name"]." さん";
-    }
-    ?>
+    <?="こんにちは ".$user_info["last_name"].$user_info["first_name"]." さん";?>
   </header>
   <body>
     <div>

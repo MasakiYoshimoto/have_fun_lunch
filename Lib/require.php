@@ -1,3 +1,3 @@
 <?php
-require_once("Lib/dbjoin.php");
-require_once("Lib/dbuser.php");
+require_once("dbjoin.php");
+require_once("dbuser.php");
