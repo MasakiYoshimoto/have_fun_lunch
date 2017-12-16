@@ -1,17 +1,23 @@
+body{
+  background-color: #ffd700;
+}
 header{
   margin-bottom: 50px;
   padding: 80px 30px 0px 10px;
-  border-bottom: solid 5px;
-  border-color: #b78326;
 }
 h1{
   font-size: 48px;
-  color:#666666;
+  color:#814721;
 }
 footer{
   background-color: #C0E399;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 200px;
+  height: 50px;
+  border-top: solid 5px #009944;
+}
+.footer_infex{
+  margin-top: 15px;
+  text-align: center;
 }

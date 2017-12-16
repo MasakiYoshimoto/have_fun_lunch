@@ -8,24 +8,19 @@
   <link rel="stylesheet" href="index.css">
   <title>Have Fun Lunch</title>
 </head>
-
 <body>
   <header>
     <h1>Have fun Lunch System</h1>
   </header>
   <div class="contents">
-    <form class="" action="top.html" method="post">
+    <form class="form_login" action="top.html" method="post">
       <table>
         <tr>
-          <td class="title">ID</td>
           <td><input type="text" class="id" name="id_user" value="" size="30" placeholder="従業員番号"></td>
         </tr>
-        <tr>
-          <td class="title">PASS</td>
           <td><input type="password" class="id" name="pass" value="" size="30" placeholder="パスワード"></td>
         </tr>
         <tr>
-          <td></td>
           <td><input type="submit" name="" value="ログイン"></td>
       </table>
     </form>
@@ -33,8 +28,10 @@
       if(!empty($_SESSION["error"]["msg"])){
       echo $_SESSION["error"]["msg"];
     }?>
+    <img class="pic_dish" src="img/index.png" alt="カウンター" title="カウンター">
   </div>
-  <footer>
+    <footer>
+    <div class="footer_infex">Have fun Lunch System とは?</div>
   </footer>
 </body>
 
