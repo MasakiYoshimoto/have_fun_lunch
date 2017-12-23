@@ -6,7 +6,9 @@ $(document).ready(function(){
       type:'post',
       dataType:'html',
       success:function(response){
-        alert(response[0]['result_code']);
+        console.log("0 : "+response[0]['result_code']);
+        console.log("1 : "+response.result_code);
+        console.log("2 : "+response[0]);
         switch (response[0]['result_code']) {
           case 0:
             //完了時の処理
