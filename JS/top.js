@@ -6,7 +6,19 @@ $(document).ready(function(){
       type:'post',
       dataType:'html',
       success:function(response){
-        $('.join_button').after('定員に達しました。');
+        switch (respomce) {
+          case 0:
+            //完了時の処理
+            break;
+          case 1:
+            //定員オーバーの処理
+            $('.join_button').after(respomce.message);
+            break;
+          default:
+            //その他の処理
+            $('.join_button').after('原因不明のエラーが発生しました。管理者へご連絡ください。');
+            break;
+        }
       }
     });
   });
