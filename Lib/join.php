@@ -20,7 +20,7 @@ if($responce>=LIMITJOIN){
   $join_result["message"] = "定員に達したため参加を受け付けることができませんでした。またのご参加をお待ちしております";
 }
 //TODO 残枠あった場合、
-else($responce<LIMITJOIN){
+else if($responce<LIMITJOIN){
 //t_joinにid_userを送る
   $now=date("Y-m-d H:i:s");
   $sql="INSERT INTO t_join(id_user,insert_date)
@@ -29,6 +29,6 @@ else($responce<LIMITJOIN){
   mysqli_query($con,$sql);
   $join_result["message"] = "success";
 }
-
-exit(json_encode($join_result));
+echo json_encode($join_result, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
+exit();
 ?>

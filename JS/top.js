@@ -6,13 +6,14 @@ $(document).ready(function(){
       type:'post',
       dataType:'html',
       success:function(response){
-        switch (respomce) {
+        alert(response[0]['result_code']);
+        switch (response[0]['result_code']) {
           case 0:
             //完了時の処理
             break;
           case 1:
             //定員オーバーの処理
-            $('.join_button').after(respomce.message);
+            $('.join_button').after(response.message);
             break;
           default:
             //その他の処理
