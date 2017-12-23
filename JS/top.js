@@ -4,12 +4,9 @@ $(document).ready(function(){
     $.ajax({
       url:'../Lib/join.php',
       type:'post',
-      dataType:'html',
+      dataType:'json',
       success:function(response){
-        console.log("0 : "+response[0]['result_code']);
-        console.log("1 : "+response.result_code);
-        console.log("2 : "+response[0]);
-        switch (response[0]['result_code']) {
+          switch (response.result_code) {
           case 0:
             //完了時の処理
             break;
