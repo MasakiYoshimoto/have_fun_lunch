@@ -1,0 +1,13 @@
+//HTML読み込む準備できたよ
+$(document).ready(function(){
+  $('.join_button').on('click',function(){
+    $.ajax({
+      url:'../Lib/join.php',
+      type:'post',
+      dataType:'html',
+      success:function(response){
+        $('.join_button').after('定員に達しました。');
+      }
+    });
+  });
+});

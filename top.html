@@ -16,26 +16,31 @@ if(empty($user_info)){
 if(!empty($_SESSION["error"]["msg"])){
   unset($_SESSION["error"]["msg"]);
 }
+  $_SESSION['user_info'] = $user_info;
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/body.css">
+    <link rel="stylesheet" href="CSS/top.css">
     <title>top-page-havefunlunch</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="JS/top.js"></script>
   </head>
+  <body>
   <header>
     <?="こんにちは ".$user_info["last_name"].$user_info["first_name"]." さん";?>
+    <?php
+    //複数行表示する場合はこの書き方
+    // foreach($user_info as $key => $value){
+    //   echo "こんにちは ".$value["first_name"]." さん";
+    // }
+    ?>
   </header>
-  <body>
-    <div>
-<?php
-//複数行表示する場合はこの書き方
-// foreach($user_info as $key => $value){
-//   echo "こんにちは ".$value["first_name"]." さん";
-// }
-?>
+    <div class=join_button>
+      参加を希望する
     </div>
     <footer>
     </footer>
