@@ -13,7 +13,7 @@
     <h1>Have fun Lunch System</h1>
   </header>
   <div class="contents">
-    <form class="form_login" action="top.html" method="post">
+    <form class="form_login" action="top.php" method="post">
       <table>
         <tr>
           <td><input type="text" class="id" name="id_user" value="" size="30" placeholder="従業員番号"></td>
@@ -33,6 +33,7 @@
     <footer>
     <div class="footer_infex">Have fun Lunch System とは?</div>
   </footer>
+
 </body>
 
 </html>

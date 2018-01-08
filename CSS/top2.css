@@ -1,11 +1,12 @@
 .join_button{
+  text-align: center;
   border-radius: 9px;
   border-style: none;
   outline: 0;
   border: 0px;
   color: #ffffff;
   background-color: #019a66;
-  padding: 10px 8px;
-  width: 238px;
-  margin-bottom: 30px;
+  padding: 13px 8px;
+  width: 200px;
+  margin: 200px 0px 0px 100px;
 }
