@@ -19,9 +19,7 @@ if($join_user_counts>=LIMITJOIN){
   $join_result["result_code"] = 1;
   $join_result["message"] = "※定員に達したため参加を受け付けることができませんでした。またのご参加をお待ちしております".LIMITJOIN;
 }else {
-  var_dump($_POST['dbtype']);
-  exit;
-  if($_POST['dbtype']===1){
+  if($_POST['dbtype']==1){
     $now=date("Y-m-d H:i:s");
     $sql="INSERT INTO t_join(id_user,insert_date)
           VALUES('{$_SESSION['user_info']['id_user']}','{$now}')";
@@ -29,7 +27,7 @@ if($join_user_counts>=LIMITJOIN){
     $join_result["result_code"] = 0 ;
     $join_result["message"] = "定員じゃないよ";
   }else {
-    delete_join_user();
+    delete_join_user($con,$_SESSION['user_info']['id_user']);
     $join_result["result_code"] = 0 ;
     $join_result["message"] = "取り消し完了";
   }
