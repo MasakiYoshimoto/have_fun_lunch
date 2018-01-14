@@ -8,33 +8,32 @@ $('.join_button').on('click',function(){
       data: {'dbtype':dbtype},
       dataType:'json',
       success:function(response){
-        console.log(response);
           switch (response.result_code) {
-          case 0:
+            case 0:
             //完了時の処理
-            var message = $('<p>').html(response.message).addClass('thanksjoinmessage');
-            $('.join_button').after(message);
-            if(dbtype==1){
-            $('.join_button').html("参加を取り消す");
-            $('#dbtype').val(0);
-            }else{
-            $('.join_button').html("参加を希望する");
-            $('#dbtype').val(1);
-            }
+              var message = $('<p>').html(response.message).addClass('thanksjoinmessage');
+              $('.join_button').after(message);
+              if(dbtype==1){
+                $('.join_button').html("参加を取り消す");
+                $('#dbtype').val(0);
+              }else{
+                $('.join_button').html("参加を希望する");
+                $('#dbtype').val(1);
+              }
             break;
-          case 1:
+            case 1:
             //定員オーバーの処理
-            var message = $('<p>').html(response.message).addClass('limitovermessage');
-            $('.join_button').after(message);
+              var message = $('<p>').html(response.message).addClass('limitovermessage');
+                $('.join_button').after(message);
             break;
-          default:
+            default:
             //その他の処理
-            $('.join_button').after('原因不明のエラーが発生しました。管理者へご連絡ください。');
+                $('.join_button').after('原因不明のエラーが発生しました。管理者へご連絡ください。');
             break;
         }
       },
-      error:function(XMLHttpRequest, textStatus, errorThrown){
-      alert('Error : ' + errorThrown);
+        error:function(XMLHttpRequest, textStatus, errorThrown){
+        alert('Error : ' + errorThrown);
       }
     });
   });

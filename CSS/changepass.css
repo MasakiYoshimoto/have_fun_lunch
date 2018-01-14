@@ -1,0 +1,31 @@
+.contents input[type="text"]{
+  margin-top: 40px;
+  border-radius: 9px;
+  border-style: none;
+  border: 0px;
+  outline: 0;
+  padding: 10px 20px;
+  width: 200px;
+  margin: 100px 0px 0px 150px;
+}
+.contents input[type="submit"]{
+  border-radius: 9px;
+  border-style: none;
+  outline: 0;
+  border: 0px;
+  color: #ffffff;
+  background-color: #019a66;
+  padding: 10px 10px;
+  width: 240px;
+  margin: 50px 0px 0px 150px;
+}
+.contents input[type="password"]{
+  border-radius: 9px;
+  border-style: none;
+  border: 0px;
+  outline: 0;
+  padding: 9px 19px;
+  width: 204px;
+  margin-top: 30px;
+  margin-left: 150px;
+}
