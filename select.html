@@ -1,3 +1,8 @@
+<?php
+require_once("Lib/require.php");
+session_start();
+$con = connect();
+$list = getUserInfo($con);?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,6 +18,21 @@
       <input type="text" class="id" name="id_user" value="" size="30" placeholder="※一緒に行きたい人の従業員番号">
       <input type="submit" name="" value="この人とランチに行きたい！">
     </form>
+    <table class="list_join_users">
+  <caption>今月の参加者リスト</caption>
+  <tr>
+    <th>従業員番号</th>
+    <th>部署</th>
+    <th>氏名</th>
+  </tr>
+  <?php foreach($list as $value) { ?>
+    <tr>
+      <td><?=$value['id_user']?></td>
+      <td><?=$value['section_code']?></td>
+      <td><?=$value['last_name'].$value['first_name']?></td>
+    </tr>
+  <?php } ?>
+</table>
   </div>
   <footer>
   <img class="hfl2" src="img/hfl2.png" alt="ロゴ" title="ロゴ">

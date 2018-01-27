@@ -4,6 +4,7 @@ body{
 .mypage2{
   width: 500px;
   height: 180px;
+  position: absolute;
 }
 .hfl2{
   width: 1000px;
@@ -14,4 +15,10 @@ footer{
   bottom: 0;
   width: 100%;
   height: 100px;
+}
+.tuuti{
+  height: 400px;
+  position: relative;
+  top: 128px;
+  left: 350px;
 }

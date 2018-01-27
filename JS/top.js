@@ -12,7 +12,7 @@ $('.join_button').on('click',function(){
             case 0:
             //完了時の処理
               var message = $('<p>').html(response.message).addClass('thanksjoinmessage');
-              $('.join_button').after(message);
+              $('.results_msg').html(message);
               if(dbtype==1){
                 $('.join_button').html("参加を取り消す");
                 $('#dbtype').val(0);
@@ -24,11 +24,11 @@ $('.join_button').on('click',function(){
             case 1:
             //定員オーバーの処理
               var message = $('<p>').html(response.message).addClass('limitovermessage');
-                $('.join_button').after(message);
+                $('.results_msg').html(message);
             break;
             default:
             //その他の処理
-                $('.join_button').after('原因不明のエラーが発生しました。管理者へご連絡ください。');
+                $('.results_msg').html('原因不明のエラーが発生しました。管理者へご連絡ください。');
             break;
         }
       },

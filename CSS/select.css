@@ -30,6 +30,12 @@ body{
   width: 240px;
   margin: 50px 0px 0px 150px;
 }
+.list_join_users{
+  border: solid 3px;
+  margin-left: 622px;
+  margin-bottom: 100px;
+  width: 440px;
+}
 .hfl2{
   width: 1000px;
   float: right;

@@ -17,7 +17,7 @@
 if($join_user_counts>=LIMITJOIN){
 //TODO 定員だった場合、定員に達したよメッセージ
   $join_result["result_code"] = 1;
-  $join_result["message"] = "※定員に達したため参加を受け付けることができませんでした。またのご参加をお待ちしております".LIMITJOIN;
+  $join_result["message"] = "※定員に達したため参加を受け付けることができませんでした。またのご参加をお待ちしております。".LIMITJOIN;
 }else {
   if($_POST['dbtype']==1){
     $now=date("Y-m-d H:i:s");
@@ -25,11 +25,11 @@ if($join_user_counts>=LIMITJOIN){
           VALUES('{$_SESSION['user_info']['id_user']}','{$now}')";
     mysqli_query($con,$sql);
     $join_result["result_code"] = 0 ;
-    $join_result["message"] = "定員じゃないよ";
+    $join_result["message"] = "※参加受付期間中はキャンセルが可能です。";
   }else {
     delete_join_user($con,$_SESSION['user_info']['id_user']);
     $join_result["result_code"] = 0 ;
-    $join_result["message"] = "取り消し完了";
+    $join_result["message"] = "※参加受付期間中は、定員に達しない限り、再度参加を希望することが可能です。";
   }
 }
 //TODO 残枠あった場合、

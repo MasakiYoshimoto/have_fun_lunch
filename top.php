@@ -39,6 +39,7 @@ if(!empty($_SESSION["error"]["msg"])){
     // }
     ?>
   </header>
+  <contents>
       <?php
       if(exist_join_user($con,$_SESSION['user_info']['id_user'])){
         $join_button_msg = "参加を希望する";
@@ -50,6 +51,9 @@ if(!empty($_SESSION["error"]["msg"])){
       ?>
       <input id="dbtype" type="hidden" name="" value="<?php echo $dbtype ;?>">
       <div class ="join_button"><?php echo $join_button_msg ; ?></div>
+      <div class="results_msg"></div>
+      <img class="jointothelunch" src="img/jointothelunch.png" alt="ﾊﾝﾊﾞｰｰｶﾞｰ" title="ﾊﾝﾊﾞｰｶﾞｰ">
+    </contents>
     <footer>
     </footer>
   </body>

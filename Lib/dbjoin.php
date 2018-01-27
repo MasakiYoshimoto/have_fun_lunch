@@ -22,7 +22,6 @@ function exist_join_user($con,$id_user){
           WHERE id_user = {$id_user}";
   $response = mysqli_query($con,$sql);
   $user_counts = mysqli_num_rows ($response);
-  var_dump($user_counts);
   if($user_counts>=1){
     return false;
   }else {

@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php
+require_once("Lib/require.php");
+session_start();
+$con = connect();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +31,13 @@
       if(!empty($_SESSION["error"]["msg"])){
       echo $_SESSION["error"]["msg"];
     }?>
-    <img class="pic_dish" src="img/index.png" alt="カウンター" title="カウンター">
+    <div class="pic_dish">
+      <p class="user_counts">
+      <?php $user_counts=countsUser($con);
+        echo LIMITJOIN-$user_counts;
+      ?>
+      <span>名</span></p>
+    </div>
   </div>
     <footer>
     <div class="footer_infex">Have fun Lunch System とは?</div>
