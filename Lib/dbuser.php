@@ -23,3 +23,10 @@ function getUserInfo($con){
   }
   return $list;
 }
+function InsertWishList($con){
+  $sql = "INSERT INTO wish_list(id_user_m, id_user_w)
+          SELECT id_user
+          FROM t_join";
+  $response = mysqli_query($con,$sql);
+  $list = array();
+}

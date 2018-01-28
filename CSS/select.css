@@ -34,7 +34,17 @@ body{
   border: solid 3px;
   margin-left: 622px;
   margin-bottom: 100px;
-  width: 440px;
+  display: block;
+  width:600px;
+  height: 300px;
+  border-collapse: collapse;
+  overflow-y:auto;
+}
+.list_join_users tr{
+  height: 50px;
+}
+.list_join_users td, .list_join_users th {
+  width: 200px;
 }
 .hfl2{
   width: 1000px;

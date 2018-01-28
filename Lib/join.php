@@ -17,7 +17,7 @@
 if($join_user_counts>=LIMITJOIN){
 //TODO 定員だった場合、定員に達したよメッセージ
   $join_result["result_code"] = 1;
-  $join_result["message"] = "※定員に達したため参加を受け付けることができませんでした。またのご参加をお待ちしております。".LIMITJOIN;
+  $join_result["message"] = "※定員に達したため参加を受け付けることができませんでした。またのご参加をお待ちしております。";
 }else {
   if($_POST['dbtype']==1){
     $now=date("Y-m-d H:i:s");
