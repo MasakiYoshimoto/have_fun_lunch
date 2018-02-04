@@ -23,10 +23,31 @@ function getUserInfo($con){
   }
   return $list;
 }
-function InsertWishList($con){
-  $sql = "INSERT INTO wish_list(id_user_m, id_user_w)
-          SELECT id_user
-          FROM t_join";
+function getTjoinUserInfo($con,$id_user){
+  $sql ="SELECT id_user
+          FROM t_join
+          WHERE id_user = {$id_user}";
   $response = mysqli_query($con,$sql);
-  $list = array();
+  $row = mysqli_fetch_assoc($response);
+  return $row;
+}
+function InsertWishList($con){
+  $sql = "INSERT INTO wish_list(id_user_w)
+          VALUES"
+  $response = mysqli_query($con,$sql);
+}
+function getpassword($con, $id_user){
+  $sql = "SELECT password
+          FROM m_user
+          WHERE id_user = {$id_user}";
+  $response = mysqli_query($con,$sql);
+  $row = mysqli_fetch_assoc($response);
+  return $row['password'];
+}
+function updatepass($con,$id_user,$newpass){
+  $sql = "UPDATE m_user
+          SET password = $newpass
+          WHERE id_user = {$id_user};";
+  $response = mysqli_query($con,$sql);
+  return $response;
 }
