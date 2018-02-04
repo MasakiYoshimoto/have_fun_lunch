@@ -33,7 +33,7 @@ function getTjoinUserInfo($con,$id_user){
 }
 function InsertWishList($con){
   $sql = "INSERT INTO wish_list(id_user_w)
-          VALUES"
+          VALUES";
   $response = mysqli_query($con,$sql);
 }
 function getpassword($con, $id_user){
