@@ -1,3 +1,10 @@
+.logout{
+  float: right;
+  position: relative;
+  right: 100px;
+  bottom: 19px;
+  font-size: 24px;
+}
 .contents input[type="text"]{
   margin-top: 40px;
   border-radius: 9px;

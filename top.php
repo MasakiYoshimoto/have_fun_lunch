@@ -31,16 +31,17 @@ if(!empty($_SESSION["error"]["msg"])){
   </head>
   <body>
   <header>
-    <?="こんにちは ".$user_info["last_name"].$user_info["first_name"]." さん";?>
-    <?php
-    //複数行表示する場合はこの書き方
-    // foreach($user_info as $key => $value){
-    //   echo "こんにちは ".$value["first_name"]." さん";
-    // }
-    ?>
+    <img class="mypage" src="img/mypage.png" alt="mypage" title="mypage">
+    <div class="changepass">
+      <a href="changepass.php">パスワード変更</a>
+    </div>
+    <div class ="logout">
+    <a href="logout.php">ログアウト</a>
+    </div>
   </header>
   <contents>
-      <?php
+    <?="こんにちは ".$user_info["last_name"].$user_info["first_name"]." さん";?>
+    <?php
       if(exist_join_user($con,$_SESSION['user_info']['id_user'])){
         $join_button_msg = "参加を希望する";
         $dbtype = 1;

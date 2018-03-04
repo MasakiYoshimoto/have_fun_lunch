@@ -10,6 +10,9 @@
   width: 200px;
   margin: 200px 0px 0px 100px;
 }
+header{
+  height: 50px;
+}
 .thanksjoinmessage{
   margin-left: 75px;
   margin-top: 30px;
@@ -20,4 +23,16 @@
   position: relative;
   left: 700px;
   bottom: 200px;
+}
+.mypage{
+  position: relative;
+  bottom: 80px;
+}
+.changepass{
+  float: right;
+  margin-right: 60px;
+}
+.logout{
+  float: right;
+  margin-right: 60px;
 }

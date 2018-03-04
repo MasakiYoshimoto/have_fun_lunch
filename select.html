@@ -2,7 +2,14 @@
 require_once("Lib/require.php");
 session_start();
 $con = connect();
-$list = getUserInfo($con);?>
+$list = getUserInfo($con);
+//存在チェック
+  $is_exist = existWishListMe($con);
+//存在していたら取り消しボタンを表示する
+//存在していなかったら一緒に行きたいボタンを表示する
+
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,8 +22,12 @@ $list = getUserInfo($con);?>
   <img class="mypage2" src="img/mypage2.png" alt="マイページ" title="マイページ">
   <div class="contents">
     <form class="form_request_id" action="select.php" method="post">
+      <?php if($is_exist === true){ ?>
+      <input type="submit" name="" value="希望を取り消す">  
+      <?php  } else { ?>
       <input type="text" class="id" name="id_user" value="" size="30" placeholder="※一緒に行きたい人の従業員番号">
       <input type="submit" name="" value="この人とランチに行きたい！">
+    <?php } ?>
     </form>
     <table class="list_join_users">
   <caption>今月の参加者リスト</caption>
@@ -28,7 +39,7 @@ $list = getUserInfo($con);?>
   <?php foreach($list as $value) { ?>
     <tr>
       <td><?=$value['id_user']?></td>
-      <td><?=$value['section_code']?></td>
+      <td><?=$value['section_name']?></td>
       <td><?=$value['last_name'].$value['first_name']?></td>
     </tr>
   <?php } ?>

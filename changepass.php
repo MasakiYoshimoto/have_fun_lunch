@@ -6,6 +6,7 @@ $con = connect();
 $oldpass ='';
 $newpass ='';
 $confirmpass ='';
+$response = false;
 $errormsg = array();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -30,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   }
 //旧PASSがデータと一致しているかを確認する
 //旧ｐASSが一致し$ていない＞エラーメッセージ表示
-  $currentpass = getpassword($con,$id_user);
+  $currentpass = getpassword($con);
   if($currentpass !== $oldpass){
     $errormsg[] = '旧パスワードが誤っています。';
   }
@@ -42,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
   }
 //新PASSが確認用と一致している＞PASS書き換え
   if(count($errormsg) === 0){
-    $response = changepass($con, $id_user, $newpass);
+    $response = changepass($con, $newpass);
   }
 }
 ?>
@@ -59,10 +60,16 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
    <body>
      <header>
        <h1>Have Fun Lunch System</h1>
+       <form class="logout" name="Logout" method="post" action="index.php">
+       <input type="submit" value="Logout" />
+       </form>
      </header>
      <div class="contents">
        <?php foreach ($errormsg as $key => $value) {
          print $value;
+       }?>
+       <?php if($response === true){
+         print 'パスワードの変更が完了しました。';
        }?>
        <form class="form_login" action="changepass.php" method="post">
          <table>

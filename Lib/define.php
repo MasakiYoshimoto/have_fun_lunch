@@ -1,3 +1,3 @@
 <?php
-  define('LIMITJOIN','3');
+  define('LIMITJOIN','20');
 ?>
