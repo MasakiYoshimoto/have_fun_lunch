@@ -41,6 +41,9 @@
   width: 238px;
   margin-bottom: 30px;
 }
+.contents input[type="submit"]:hover{
+	background-color: #fdd;
+}
 .pic_dish{
   background-image: url("../img/index.png");
   background-size: contain;
@@ -63,4 +66,18 @@
   font-size: 50px;
   position: relative;
   right: 37px;
+}
+.management input[type="button"]{
+  border-radius: 9px;
+  border-style: none;
+  outline: 0;
+  border: 0px;
+  color: #ffffff;
+  background-color: #019a66;
+  position: relative;
+  left: 1200px;
+  bottom: 50px;
+  padding: 10px 8px;
+  width: 238px;
+  margin-bottom: 62px;
 }

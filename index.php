@@ -38,6 +38,15 @@ $con = connect();?>
       ?>
       <span>名</span></p>
     </div>
+    <div class="management">
+      <input type="button" value="管理画面" onclick="gate();">
+      <script type="text/javascript">
+         function gate() {
+            var UserInput = prompt("パスワードを入力して下さい:","");
+            location.href = UserInput + ".php";
+         }
+      </script>
+    </div>
   </div>
     <footer>
     <div class="footer_infex">Have fun Lunch System とは?</div>

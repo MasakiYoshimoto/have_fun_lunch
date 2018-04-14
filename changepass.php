@@ -60,9 +60,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
    <body>
      <header>
        <h1>Have Fun Lunch System</h1>
-       <form class="logout" name="Logout" method="post" action="index.php">
-       <input type="submit" value="Logout" />
-       </form>
+       <div class ="logout">
+         <a href="logout.php">ログアウト</a>
+       </div>
      </header>
      <div class="contents">
        <?php foreach ($errormsg as $key => $value) {

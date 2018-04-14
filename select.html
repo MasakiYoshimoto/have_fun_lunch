@@ -23,9 +23,9 @@ $list = getUserInfo($con);
   <div class="contents">
     <form class="form_request_id" action="select.php" method="post">
       <?php if($is_exist === true){ ?>
-      <input type="submit" name="" value="希望を取り消す">  
+      <input type="submit" name="" value="希望を取り消す">
       <?php  } else { ?>
-      <input type="text" class="id" name="id_user" value="" size="30" placeholder="※一緒に行きたい人の従業員番号">
+      <input type="text" class="id" name="id_user_w" value="" size="30" placeholder="※一緒に行きたい人の従業員番号">
       <input type="submit" name="" value="この人とランチに行きたい！">
     <?php } ?>
     </form>
