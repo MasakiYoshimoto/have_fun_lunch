@@ -2,6 +2,8 @@
 require_once("Lib/require.php");
 session_start();
 $con = connect();
+$errormsg = array();
+
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
   if(isset($_POST['shuffle'])){
@@ -10,7 +12,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $selected_users = array();
     $result = true;
     $group_id = 1;
-    $errormsg = array();
     mysqli_autocommit($con, false);
     $result = resetUserGroup($con);
     if($result === false){

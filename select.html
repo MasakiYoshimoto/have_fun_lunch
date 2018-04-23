@@ -7,8 +7,6 @@ $list = getUserInfo($con);
   $is_exist = existWishListMe($con);
 //存在していたら取り消しボタンを表示する
 //存在していなかったら一緒に行きたいボタンを表示する
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,8 +16,11 @@ $list = getUserInfo($con);
     <link rel="stylesheet" href="CSS/select.css">
     <title>MyPage</title>
   </head>
+  <header>
+    <a href="logout.php" ><img src="img/logout.png" class="logout" alt="ログアウト"></a>
+    <img class="mypage2" src="img/mypage2.png" alt="マイページ" title="マイページ">
+  </header>
   <body>
-  <img class="mypage2" src="img/mypage2.png" alt="マイページ" title="マイページ">
   <div class="contents">
     <form class="form_request_id" action="select.php" method="post">
       <?php if($is_exist === true){ ?>
@@ -31,7 +32,7 @@ $list = getUserInfo($con);
     </form>
     <table class="list_join_users">
   <caption>今月の参加者リスト</caption>
-  <tr>
+  <tr class="toptr">
     <th>従業員番号</th>
     <th>部署</th>
     <th>氏名</th>

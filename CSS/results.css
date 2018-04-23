@@ -5,7 +5,56 @@ body{
   width: 500px;
   height: 180px;
   position: absolute;
+  top:0px;
+  float: left;
 }
+.logout{
+  position: relative;
+  bottom: 160px;
+  right: 130px;
+  float: right;
+}
+.list_join_users{
+  margin: 200px auto;
+  width: 800px;
+}
+caption{
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  background-color: #fc4990;
+  color: #ffff;
+  border-radius: 10px 10px 10px 10px;
+  height: 50px;
+}
+.toptr{
+  background-color: slateblue;
+  color: white;
+  font-weight: bold;
+}
+tr {
+  background-color: floralwhite;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+  width: 800px;
+  text-align: center;
+  font-size: 30px;
+  display: block;
+  border-radius: 10px 10px 10px 10px;
+}
+th {
+    padding-top: 10px;
+    padding-right: 120px;
+    padding-left: 50px;
+}
+td {
+    padding-top: 10px;
+    text-align: center;
+    width: 266px;
+}
+
 .hfl2{
   width: 1000px;
   float: right;

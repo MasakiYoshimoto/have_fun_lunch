@@ -13,6 +13,9 @@
 header{
   height: 50px;
 }
+.contents{
+  margin-left: 100px;
+}
 .thanksjoinmessage{
   margin-left: 75px;
   margin-top: 30px;
@@ -31,6 +34,8 @@ header{
 .changepass{
   float: right;
   margin-right: 60px;
+  position: relative;
+  bottom: 18px;
 }
 .logout{
   float: right;

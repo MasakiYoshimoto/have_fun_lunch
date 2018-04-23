@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="CSS/description.css">
+  <link rel="stylesheet" href="CSS/animsition.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="JS/animsition.min.js"></script>
+  <title>Have Fun Lunch とは？</title>
+</head>
+<body>
+  <div class="animsition">
+  <h1>What's Have Fun Lunch?</h1>
+  <h2>Have Fun Lunch は 社内交流 を 促進する制度 です</h2>
+  <img class="system1" src="img/system1.png" alt="説明１" title="des1">
+  <div class ="copy">
+  <p class="copy1">参加を表明し、ランダムにグルーピングされた指定のメンバーでランチに行くと</p>
+  <p class="copy1">交流促進支援金として1,000円までランチ補助が支給されます</p>
+  </div>
+</div>
+<footer>
+<a href="description2.html" class="animsition-link">●</a>
+</footer>
+<script>
+$(document).ready(function() {
+  $('.animsition').animsition({
+    inClass: 'fade-in-up-lg',
+    outClass: 'fade-out-up-lg',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: false,
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</body>
+</html>

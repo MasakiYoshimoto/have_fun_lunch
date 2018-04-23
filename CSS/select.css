@@ -5,9 +5,40 @@ body{
   width: 500px;
   height: 180px;
 }
+header a{
+  position: absolute;
+  top: 30px;
+  right: 130px;
+}
 .form_request_id{
   width: 250px;
   float: left;
+}
+caption {
+  background-color: #ffeca6;
+  padding: 10px;
+  font-weight: bold;
+  color: #5d99ff;
+  font-size: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.toptr{
+  position: absolute;
+  width: 581px;
+  background-color: powderblue;
+  height: 40px;
+}
+th{
+  padding-top: 15px;
+  font-weight: bold;
+  color: slategray;
+}
+tr{
+  background-color: #ffffff;
+  font-size: 20px;
+  text-align: center;
 }
 .contents input[type="text"]{
   margin-top: 40px;
@@ -31,12 +62,11 @@ body{
   margin: 50px 0px 0px 150px;
 }
 .list_join_users{
-  border: solid 3px;
-  margin-left: 622px;
+  margin-left: 720px;
   margin-bottom: 100px;
   display: block;
   width:600px;
-  height: 300px;
+  height: 350px;
   border-collapse: collapse;
   overflow-y:auto;
 }

@@ -33,14 +33,15 @@ if(!empty($_SESSION["error"]["msg"])){
   <header>
     <img class="mypage" src="img/mypage.png" alt="mypage" title="mypage">
     <div class="changepass">
-      <a href="changepass.php">パスワード変更</a>
+      <a href="changepass.php"><img src="img/pass.png" alt="パスワード変更"></a>
     </div>
     <div class ="logout">
-    <a href="logout.php">ログアウト</a>
+      <a href="logout.php"><img src="img/logout.png" alt="ログアウト"></a>
     </div>
   </header>
-  <contents>
+  <div class="contents">
     <?="こんにちは ".$user_info["last_name"].$user_info["first_name"]." さん";?>
+  </div>
     <?php
       if(exist_join_user($con,$_SESSION['user_info']['id_user'])){
         $join_button_msg = "参加を希望する";
@@ -54,7 +55,6 @@ if(!empty($_SESSION["error"]["msg"])){
       <div class ="join_button"><?php echo $join_button_msg ; ?></div>
       <div class="results_msg"></div>
       <img class="jointothelunch" src="img/jointothelunch.png" alt="ﾊﾝﾊﾞｰｰｶﾞｰ" title="ﾊﾝﾊﾞｰｶﾞｰ">
-    </contents>
     <footer>
     </footer>
   </body>

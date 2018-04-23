@@ -61,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
      <header>
        <h1>Have Fun Lunch System</h1>
        <div class ="logout">
-         <a href="logout.php">ログアウト</a>
+         <a href="logout.php"><img src="img/logout.png" alt="ログアウト"></a>
        </div>
      </header>
      <div class="contents">

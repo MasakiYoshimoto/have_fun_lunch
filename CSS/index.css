@@ -1,3 +1,6 @@
+h1{
+  font-weight: bold;
+}
 .contents{
   margin-left: 150px;
 }
@@ -42,7 +45,7 @@
   margin-bottom: 30px;
 }
 .contents input[type="submit"]:hover{
-	background-color: #fdd;
+	background-color: #fafad2;
 }
 .pic_dish{
   background-image: url("../img/index.png");
@@ -80,4 +83,15 @@
   padding: 10px 8px;
   width: 238px;
   margin-bottom: 62px;
+}
+.footer_index {
+    margin-top: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #66cc94; 
+}
+.animsition-link{
+  color: #ffff;
+  text-decoration: none;
 }
